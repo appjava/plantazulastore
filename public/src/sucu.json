@@ -1,0 +1,23 @@
+[
+    {
+      "id": "s1",
+      "name": "Suculenta Rosa",
+      "price": 15000,
+      "desc": "Plantas resistentes con encanto natural.",
+      "img": "images/rosaSuculenta.png"
+    },
+    {
+      "id": "s2",
+      "name": "Suculenta Bananito",
+      "price": 15000,
+      "desc": "Belleza botánica de bajo cuidado.",
+      "img": "images/bananoSuculenta.png"
+    },
+    {
+      "id": "s3",
+      "name": "Suculenta Cactus",
+      "price": 15000,
+      "desc": "Hojas exuberantes y colores cautivadores.",
+      "img": "images/suculentaCactusNavidad.jpeg"
+    }
+]

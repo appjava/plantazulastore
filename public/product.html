@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlantaZULA StoreApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+  <!--<link rel="manifest" href="/site.webmanifest">-->
+  
+  <link rel="manifest" href="/manifest.json">
+  
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  
+      <h6 id="resaltado" class="note estante">"Envío gratis por compras superiores a $90.000 COP"</h6>
+  
+  <div class="navbar">
+    <!--<div class="menu" id="menu">
+      
+      <ul>
+        <label for="menu-bar"><i class="bi bi-list"></i></label>
+        <input type="checkbox" id="menu-bar">
+        
+        <nav class="cates">
+			<label for="menu-bar"><i class="bi bi-x-square-fill"></i></label>
+            <h4>ESTANTERÍA</h4>
+            <p onclick="onlyBromelias()">Bromelias</p>
+            <p onclick="onlySuculentas()">Suculentas</p>
+            <p onclick="onlyOrquideas()">Orquideas</p>
+            <p onclick="onlyAnturios()">Anturios</p>
+            <p onclick="onlyCartuchos()">Cartuchos</p>
+            <p onclick="onlyPlaticeros()">Platiceros</p>
+            <p onclick="onlyComplementos()">Complementos</p>
+        </nav>
+      </ul>
+    </div>-->
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logos/logoPlantaZula.png" alt="logoPlantaZula">
+      </a>
+    </div>
+    
+    <div class="logo">
+    <h2>ShowCase</h2>
+	</div>
+    
+    <div class="cart">
+      <a href="cart.html">
+        <i class="bi bi-cart2"></i>
+        <div id="cartAmount" class="cartAmount">0</div>
+      </a>
+      <span id="subTot2" class="subTot"></span>
+    </div>
+  </div>
+  
+  <div class="nameShowcase" id="nameShowcase">
+
+  </div>
+  
+  <div class="show" id="show">
+
+  </div>
+  
+  <div class="container" id="footer">
+    <div>
+      <h3>plantaszula@gmail.com</h3> 
+      <a href="https://wa.me/573163318295" target="_blank"><i class="bi bi-whatsapp"></i> (+57) 316 331 8295</a>
+    </div>
+    <p class="white">.</p>
+    <a href="index.html"><p>Derechos Reservados © 2023</p></a>
+    <a href="http://echo-group.web.app" target="_blank"><p>Powered by EchoGroup</p></a>
+    <!--<a href="index.html"><i class="bi bi-facebook"></i> 
+      <i class="bi bi-instagram"></i> 
+      <i class="bi bi-youtube"></i>
+    </a>-->
+  </div>
+</body>
+<script src="src/Data.js"></script>
+<script src="src/show.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("pCTOvxZAt0jUMnGQf");
+    })();
+</script>
+
+</html>

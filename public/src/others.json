@@ -1,0 +1,23 @@
+[
+	{
+	  "id": "t1",
+	  "name": "OTRA PLANTA",
+	  "price": 15000,
+	  "desc": "Plantas resistentes con encanto natural.",
+	  "img": "images/rosaSuculenta.png"
+	},
+	{
+	  "id": "t2",
+	  "name": "UNA MAS",
+	  "price": 15000,
+	  "desc": "Belleza botánica de bajo cuidado.",
+	  "img": "images/bananoSuculenta.png"
+	},
+	{
+	  "id": "t3",
+	  "name": "LA ULTIMA",
+	  "price": 15000,
+	  "desc": "Hojas exuberantes y colores cautivadores.",
+	  "img": "images/suculentaCactusNavidad.jpeg"
+	}
+  ]
