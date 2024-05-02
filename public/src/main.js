@@ -21,6 +21,13 @@ let productSelect = JSON.parse(localStorage.getItem("producto")) || [];
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 let subTot2 = document.getElementById("subTot2");
 
+const menuBar = document.getElementById('menu-bar');
+
+// Hide guide
+shop.addEventListener('click', () => {
+  menuBar.checked = false;
+});
+
 let selectionID = (id) => {
   productSelect = [];
   let selectedItem = id;
