@@ -694,7 +694,7 @@ ul li:hover {
   
 }
 @media (min-width: 300px) and (max-width: 560px){
-
+  
   .shop {
     grid-template-columns: repeat(1, 250px);
     gap: 3px;
