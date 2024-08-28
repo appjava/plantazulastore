@@ -32,7 +32,7 @@ let showWelco = () => {
     
     return `
     <div class="detail">
-      <h2 class="detail">${search.name}</h2>
+      <h2 class="detail">NOmbre: ${search.name}</h2>
     </div>
     `;}).join(""));
 
