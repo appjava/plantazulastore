@@ -50,47 +50,53 @@ let showProduct = () => {
       let search2 = basket.find((x) => x.id === id) || [];
       return `
       
-      <!--<div class="showcase">
-          <img class="" src=${search.img === undefined ? ["images/logos/logoClau.png"] : search.img} >
-          <img class="" src=${search.img1 === undefined ? ["images/logos/logoClau.png"] : search.img1} >
-          <img class="" src=${search.img2 === undefined ? ["images/logos/logoClau.png"] : search.img2} >
-          <img class="" src=${search.img3 === undefined ? ["images/logos/logoClau.png"] : search.img3} >
-      </div>-->
-      <div class="showcase">
-      <div class="pic-ctn">
-          <img src=${search.img === undefined ? ["images/logos/logoClau.png"] : search.img} alt="" class="pic">
-          <img src=${search.img1 === undefined ? ["images/logos/logoClau.png"] : search.img1} alt="" class="pic">
-          <img src=${search.img2 === undefined ? ["images/logos/logoClau.png"] : search.img2} alt="" class="pic">
-          <img src=${search.img3 === undefined ? ["images/logos/logoClau.png"] : search.img3} alt="" class="pic">
-      </div>
-      </div>
-      <div>
-      <div class="detail">
-        <br>
-        <h3 class="detail">${search.desc}</h3>
-        <br>
-      </div>
+      <section class="product-details">
+        <div class="image-slider" style="background-image: url(${search.img})">
+            <div class="product-images">
+                <img src=${search.img === undefined ? ["images/logos/logoPlantaZula.png"] : search.img} alt="" class="active">
+                <img src=${search.img1 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img1} alt="" >
+                <img src=${search.img2 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img2} alt="" >
+                <img src=${search.img3 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img3} alt="" >
+            </div>
+        </div>
+      </section>
+
+      
       <!--
-      <br>
-      <p class="desc-item-show">${search.desc1 === undefined ? "" : search.desc1}</p>
-      <br>
+      <div class="showcase">
+        <div class="pic-ctn">
+            <img src=${search.img === undefined ? ["images/logos/logoPlantaZula.png"] : search.img} alt="" class="pic">
+            <img src=${search.img1 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img1} alt="" class="pic">
+            <img src=${search.img2 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img2} alt="" class="pic">
+            <img src=${search.img3 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img3} alt="" class="pic">
+        </div>
+      </div>
       -->
-      <div id=product-id-${search.id} class="item-show">
-        <br>
-        <div class="price-quantity">
-          <div class="buttons-show">
-            <h3 class="price-item-show" onclick="increment(${search.id})">$ ${search.price} COP</h3>
-            <i onclick="increment(${search.id})" class="bi bi-cart-plus-fill"></i>
-            <div id=${search.id} class="quantity-item-show">
-              ${search2.item === undefined ? "" : search2.item}
+      <div>
+        <div class="detail">
+          <br>
+          <h3 class="detail">${search.desc}</h3>
+          <br>
+        </div>
+      
+        <div id=product-id-${search.id} class="item-show">
+          <br>
+          <div class="price-quantity">
+            <div class="buttons-show">
+              <h3 class="price-item-show" onclick="increment(${search.id})">$ ${search.price} COP</h3>
+              <i onclick="increment(${search.id})" class="bi bi-cart-plus-fill"></i>
+              <div id=${search.id} class="quantity-item-show">
+                ${search2.item === undefined ? "" : search2.item}
+              </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
+
       <a href="index.html">
       <button class="HomeBtn">Volver a Estante</button>
       </a>
+     
     `;}).join(""));
 };
 
@@ -146,6 +152,21 @@ let generateShop = () => {
 allPlants();
 //generateShop();
 showProduct();
+
+const productImages = document.querySelectorAll(".product-images img"); // selecting all image thumbs
+const productImageSlide = document.querySelector(".image-slider"); // seclecting image slider element
+
+let activeImageSlide = 0; // default slider image
+
+productImages.forEach((item, i) => { // loopinh through each image thumb
+    item.addEventListener('click', () => { // adding click event to each image thumbnail
+        productImages[activeImageSlide].classList.remove('active'); // removing active class from current image thumb
+        item.classList.add('active'); // adding active class to the current or clicked image thumb
+        productImageSlide.style.backgroundImage = `url('${item.src}')`; // setting up image slider's background image
+        activeImageSlide = i; // updating the image slider variable to track current thumb
+    })
+})
+
 
 let increment = (id) => {
   let selectedItem = id;

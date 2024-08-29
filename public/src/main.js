@@ -21,6 +21,13 @@ let productSelect = JSON.parse(localStorage.getItem("producto")) || [];
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 let subTot2 = document.getElementById("subTot2");
 
+const menuBar = document.getElementById('menu-bar');
+
+// Hide guide
+shop.addEventListener('click', () => {
+  menuBar.checked = false;
+});
+
 let selectionID = (id) => {
   productSelect = [];
   let selectedItem = id;
@@ -157,7 +164,7 @@ let showProduct = () => {
     <div id=product-id-${id} class="item">
         <img class="img-item" src=${img} alt="">
         <div class="details">
-          <h4 class="name-item">${name}</h4>
+          <h4 class="name-item">Nombre: ${name}</h4>
           <p class="desc-item">"${desc}"</p>
         </div>
         <div class="price-quantity">
