@@ -202,7 +202,7 @@ a {
   background-color: #EEF0F4;
   border: none;
   border-radius: 6px;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
 }
 #resaltado{
@@ -588,43 +588,51 @@ ul li:hover {
 /*--------------------------------------*/
 .product-details{
   width: 100%;
-  padding: 60px 10vw;
+  max-width: 450px;
+  padding: 3px;
   display: flex;
   justify-content: space-between;
+  background: white;
+  margin: 15px auto 60px auto;
 }
 
 .image-slider{
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 45vh;
+  min-height: 600px;
   position: relative;
   background-position: center;
   background-size: cover;
+  background-clip: padding-box;
+  margin: 0 auto;
+  border-radius: 9px;
 }
 
 .product-images{
   position: absolute;
-  bottom: -60px;
+  bottom: -120px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 95%;
   background: #fff;
   border-radius: 5px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  height: 100px;
+  height: auto;
   grid-gap: 10px;
-  padding: 10px;
+  padding: 3px;
+  margin-bottom: 30px;
 }
 
 .product-images img{
   width: 100%;
-  height: 80px;
+  height: 100%;
   object-fit: cover;
   cursor: pointer;
 }
 
 .product-images img.active{
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 
@@ -667,9 +675,9 @@ ul li:hover {
     display: none;
   }
 }
-@media (min-width: 900px) and (max-width: 1200px){
+@media (min-width: 720px) and (max-width: 1200px){
   .shop {
-    grid-template-columns: repeat(3, 250px);
+    grid-template-columns: repeat(3, 240px);
     gap: 12px;
   }
   .logo{
@@ -694,12 +702,15 @@ ul li:hover {
   .menu{
     display: none;
   }
+  .detail{
+    width: 90%;
+  }
   
 }
 
-@media (min-width: 560px) and (max-width: 900px){
+@media (min-width: 560px) and (max-width: 720px){
   .shop {
-    grid-template-columns: repeat(2, 250px);
+    grid-template-columns: repeat(2, 240px);
     gap: 9px;
   }
   .logo{
@@ -738,7 +749,7 @@ ul li:hover {
 @media (min-width: 300px) and (max-width: 560px){
   
   .shop {
-    grid-template-columns: repeat(1, 250px);
+    grid-template-columns: repeat(1, 300px);
     gap: 3px;
   }
   .logo img {

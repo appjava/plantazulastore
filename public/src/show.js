@@ -41,7 +41,7 @@ let showWelco = () => {
 
 
 let showProduct = () => {
-  showWelco();
+  //showWelco();
   
   return (show.innerHTML = productSelect.map((x) => {
     
@@ -49,7 +49,10 @@ let showProduct = () => {
       let search = standItemsData.find((x) => x.id === id) || [];
       let search2 = basket.find((x) => x.id === id) || [];
       return `
-      
+      <div class="detail">
+      <h2 class="detail">${search.name}</h2>
+      </div>
+
       <section class="product-details">
         <div class="image-slider" style="background-image: url(${search.img})">
             <div class="product-images">
@@ -60,25 +63,14 @@ let showProduct = () => {
             </div>
         </div>
       </section>
-
-      
-      <!--
-      <div class="showcase">
-        <div class="pic-ctn">
-            <img src=${search.img === undefined ? ["images/logos/logoPlantaZula.png"] : search.img} alt="" class="pic">
-            <img src=${search.img1 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img1} alt="" class="pic">
-            <img src=${search.img2 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img2} alt="" class="pic">
-            <img src=${search.img3 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img3} alt="" class="pic">
-        </div>
-      </div>
-      -->
+      <br><br><br>
       <div>
         <div class="detail">
           <br>
           <h3 class="detail">${search.desc}</h3>
           <br>
         </div>
-      
+        <br>
         <div id=product-id-${search.id} class="item-show">
           <br>
           <div class="price-quantity">
@@ -92,10 +84,14 @@ let showProduct = () => {
           </div>
         </div>
       </div>
-
-      <a href="index.html">
-      <button class="HomeBtn">Volver a Estante</button>
-      </a>
+      <br>
+      
+      <button class="HomeBtn" onclick="history.back()">Volver a Estante!</button>
+      
+      <!--
+      <form>
+        <input type="button" value="<<< Volver a Estante!" onclick="history.back()">
+      </form>-->
      
     `;}).join(""));
 };
