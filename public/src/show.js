@@ -38,6 +38,10 @@ let showWelco = () => {
 
 };
 
+function atras() {
+  history.back();
+  calculation();
+}
 
 
 let showProduct = () => {
@@ -90,7 +94,7 @@ let showProduct = () => {
       
       <!--
       <form>
-        <input type="button" value="<<< Volver a Estante!" onclick="history.back()">
+        <input type="button" value="<<< Volver a Estante!" onclick="atras()">
       </form>-->
      
     `;}).join(""));
