@@ -219,6 +219,7 @@ a {
   height:auto;
   justify-content: space-between;
   margin-bottom: 6px;
+  background-color: gray;
 }
 .item-show {
   border: 2px solid #212529;
