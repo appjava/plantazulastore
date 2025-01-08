@@ -148,6 +148,7 @@ a {
 .menu #categorias{
   margin-bottom: 12px;
 }
+
 /**
 * ! Shop items styles are here
 **/
@@ -667,6 +668,10 @@ ul li:hover {
   .logo{
     text-align:start;
   }
+  .welcome{
+    width: 90%;
+    margin: 0 auto;
+  }
 
 }
 @media (min-width: 1200px) and (max-width: 1400px){
@@ -690,10 +695,15 @@ ul li:hover {
   .menu{
     display: none;
   }
+  .welcome{
+    width: 90%;
+    margin: 0 auto;
+  }
+
 }
 @media (min-width: 720px) and (max-width: 1200px){
   .shop {
-    grid-template-columns: repeat(3, 240px);
+    grid-template-columns: repeat(3, 210px);
     gap: 12px;
   }
   .logo{
