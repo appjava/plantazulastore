@@ -69,7 +69,9 @@ let generateCartItems = () => {
         let search = shopItemsData.find((y) => y.id === id) || [];
         return `
       <div class="cart-item">
-      <a href="product.html" onclick="selectionID(${id})"><img src=${search.img} alt="" /></a>
+        <a href="product.html" onclick="selectionID(${id})">
+         <img src=${search.img} alt="" />
+        </a>
         <div class="details-cart">
           <div class="title-price-x">
               <h4 class="title-price">
