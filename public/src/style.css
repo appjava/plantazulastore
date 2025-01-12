@@ -652,6 +652,21 @@ ul li:hover {
   opacity: 0.3;
 }
 
+.showcase{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.leftSide{
+  background-color: yellow;
+  border: 1px solid red;
+  width: 50%;
+  height: auto;
+}
+.rightSide{
+  width: 40%;
+}
+
 
 /*---------------------- MEDIA --------------------*/
 
@@ -699,6 +714,15 @@ ul li:hover {
     width: 90%;
     margin: 0 auto;
   }
+  .image-slider{
+    height: 400px;
+  }
+  .product-images{
+    border-radius: 6px;
+    height: 5em;
+    grid-gap: 6px;
+    padding: 0px;
+  }
 
 }
 @media (min-width: 720px) and (max-width: 1200px){
@@ -730,6 +754,15 @@ ul li:hover {
   }
   .detail{
     width: 90%;
+  }
+  .image-slider{
+    height: 400px;
+  }
+  .product-images{
+    border-radius: 6px;
+    height: 5em;
+    grid-gap: 6px;
+    padding: 0px;
   }
   
 }
@@ -770,6 +803,16 @@ ul li:hover {
   .menu{
     display: none;
   }
+  .image-slider{
+    height: 400px;
+  }
+  .product-images{
+    border-radius: 6px;
+    height: 5em;
+    grid-gap: 6px;
+    padding: 0px;
+  }
+  
   
 }
 @media (min-width: 300px) and (max-width: 560px){
@@ -817,6 +860,19 @@ ul li:hover {
 	padding-top: 9px;
 	padding-left: 0px;
 	font-size: 15px;
+  }
+  #resaltado{
+    margin: 0 auto;
+    
+  }
+  .image-slider{
+    height: 400px;
+  }
+  .product-images{
+    border-radius: 6px;
+    height: 5em;
+    grid-gap: 6px;
+    padding: 0px;
   }
 }
 
