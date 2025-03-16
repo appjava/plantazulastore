@@ -1,13 +1,13 @@
-/*
-if ("serviceWorker" in navigator) {
+
+/*if ("serviceWorker" in navigator) {
 	  window.addEventListener("load", function() {
 		navigator.serviceWorker
-		  .register("/serviceWorker.js")
+		  .register("./serviceWorker.js")
 		  .then(res => console.log("service worker registered"))
 		  .catch(err => console.log("service worker not registered", err))
 	  })
-	}
-*/
+	}*/
+
 
 let shop = document.getElementById("shop") || [];
 let show = document.getElementById("show");
@@ -53,37 +53,8 @@ let showProduct = () => {
       let search = standItemsData.find((x) => x.id === id) || [];
       let search2 = basket.find((x) => x.id === id) || [];
       return `
-      <div class="showcase">
-        <div class="leftSide">
-        <section class="product-details">
-          <div class="image-slider" style="background-image: url(${search.img})">
-            <div class="product-images">
-                <img src=${search.img === undefined ? ["images/logos/logoPlantaZula.png"] : search.img} alt="" class="active">
-                <img src=${search.img1 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img1} alt="" >
-                <img src=${search.img2 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img2} alt="" >
-                <img src=${search.img3 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img3} alt="" >
-            </div>
-          </div>
-        </section>
-        </div>
-        <div class="rightSide">
-          <h2 class="detail">${search.name}</h2>
-          <h3 class="detail">${search.desc}</h3>
-          <div id=product-id-${search.id} class="item-show">
-            <div class="price-quantity">
-              <div class="buttons-show">
-                <h3 class="price-item-show" onclick="increment(${search.id})">$ ${search.price} COP</h3>
-                <i onclick="increment(${search.id})" class="bi bi-cart-plus-fill"></i>
-                <div id=${search.id} class="quantity-item-show">
-                  ${search2.item === undefined ? "" : search2.item}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       
-      <!--<div class="detail">
+      <div class="detail">
       <h2 class="detail">${search.name}</h2>
       </div>
 
@@ -120,7 +91,10 @@ let showProduct = () => {
       </div>
       <br>
       
-      <button class="HomeBtn" onclick="history.back()">Volver a Estante!</button>-->
+      <button class="HomeBtn" onclick="history.back()">Volver a Estante!</button>
+        
+      
+      
       
      
     `;}).join(""));
