@@ -1,13 +1,13 @@
-/*
-if ("serviceWorker" in navigator) {
+
+/*if ("serviceWorker" in navigator) {
 	  window.addEventListener("load", function() {
 		navigator.serviceWorker
-		  .register("/serviceWorker.js")
+		  .register("./serviceWorker.js")
 		  .then(res => console.log("service worker registered"))
 		  .catch(err => console.log("service worker not registered", err))
 	  })
-	}
-*/
+	}*/
+
 
 let shop = document.getElementById("shop") || [];
 let show = document.getElementById("show");
@@ -53,6 +53,7 @@ let showProduct = () => {
       let search = standItemsData.find((x) => x.id === id) || [];
       let search2 = basket.find((x) => x.id === id) || [];
       return `
+      
       <div class="detail">
       <h2 class="detail">${search.name}</h2>
       </div>
@@ -91,11 +92,10 @@ let showProduct = () => {
       <br>
       
       <button class="HomeBtn" onclick="history.back()">Volver a Estante!</button>
+        
       
-      <!--
-      <form>
-        <input type="button" value="<<< Volver a Estante!" onclick="atras()">
-      </form>-->
+      
+      
      
     `;}).join(""));
 };

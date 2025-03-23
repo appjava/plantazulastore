@@ -2,7 +2,7 @@
 if ("serviceWorker" in navigator) {
 	  window.addEventListener("load", function() {
 		navigator.serviceWorker
-		  .register("/serviceWorker.js")
+		  .register("./serviceWorker.js")
 		  .then(res => console.log("service worker registered"))
 		  .catch(err => console.log("service worker not registered", err))
 	  })
@@ -70,7 +70,9 @@ let generateShop = () => {
       let search = basket.find((x) => x.id === id) || [];
       return `
     <div id=product-id-${id} class="item">
-      <a href="product.html" onclick="selectionID(${id})"><img class="img-item" src=${img} alt=""></a>
+        <a href="product.html" onclick="selectionID(${id})">
+          <img class="img-item" src=${img} alt="">
+        </a>
         <div class="details">
           <h4 class="name-item">${name}</h4>
           <p class="desc-item">"${desc1}"</p>

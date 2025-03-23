@@ -1,6 +1,6 @@
-const staticPlantaZULA = "plantaZULA"
+const staticPlantaZULA = "PlantaZULA StoreApp"
 const assets = [
-  "/index.html",
+  "index.html"
 ]
 
 self.addEventListener("install", installEvent => {
