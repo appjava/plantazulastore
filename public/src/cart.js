@@ -252,7 +252,7 @@ total = TotalAmount();
 
 function sendEmail(){
 
-  //total = TotalAmount();
+  total = TotalAmount();
   Name = document.getElementById("name").value;
   Email = document.getElementById("email").value;
   Phone = document.getElementById("phone").value;
@@ -300,9 +300,14 @@ console.log("Total Compra: " + total + " COP");
 */
 //clearCart();
 
+printTOTAL();
 }
 
-
+function printTOTAL(){
+  //total = TotalAmount();
+  console.log("Total:");
+  console.log(total);
+}
 function gracias(){ 
   alert("Pedido enviado.\nEn breve nos comunicaremos para definir los detalles del envío y concretar la compra.\nGracias por visitarnos!!!")
   clearCart()
