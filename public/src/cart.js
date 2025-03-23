@@ -252,10 +252,10 @@ total = TotalAmount();
 
 function sendEmail(){
 
-  total = TotalAmount();
   Name = document.getElementById("name").value;
   Email = document.getElementById("email").value;
   Phone = document.getElementById("phone").value;
+  total = TotalAmount();
   
   var params = {
     userName: Name,
@@ -279,9 +279,9 @@ if (Name == "" || Email == "" ||  Phone == ""){
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";
     document.getElementById("phone").value = "";
-      
-    alert("Pedido enviado.\nEn breve nos comunicaremos para definir los detalles del envío y concretar la compra.\nGracias por visitarnos!!!")
-    clearCart()
+    clearCart();
+    alert("Pedido enviado.\nEn breve nos comunicaremos para definir los detalles del envío y concretar la compra.\nGracias por visitarnos!!!");
+    
 }
 
 
