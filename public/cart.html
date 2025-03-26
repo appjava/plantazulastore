@@ -22,6 +22,29 @@
 
 <body>
   <div class="navbar">
+
+    <div class="menu" id="menu">
+      
+      <ul>
+        <!--<label for="menu-bar"><i class="bi bi-list"></i></label>-->
+        <input type="checkbox" id="menu-bar">
+        
+        <nav class="cates">
+			    <label for="menu-bar">
+            <!--<i class="bi bi-x-square-fill"></i>-->
+          </label>
+            <h4>ESTANTERÍA</h4>
+            <p onclick="onlyBromelias()">Bromelias</p>
+            <p onclick="onlySuculentas()">Suculentas</p>
+            <p onclick="onlyOrquideas()">Orquideas</p>
+            <p onclick="onlyAnturios()">Anturios</p>
+            <p onclick="onlyCartuchos()">Cartuchos</p>
+            <p onclick="onlyPlaticeros()">Platiceros</p>
+            <p onclick="onlyComplementos()">Complementos</p>
+        </nav>
+
+      </ul>
+    </div>
     
     <div class="logo">
       <a href="index.html">
@@ -40,6 +63,23 @@
       </a>
       <span id="subTot" class="subTot"></span>
     </div>
+  </div>
+
+  <div class="navbar-mobile">
+    <div class="btnNav"><a href="index.html"><i class="bi bi-house"></i></a></div>
+    <div class="btnNav">
+      <label for="menu-bar">
+        <i class="bi bi-list"></i>
+      </label>
+      <input type="checkbox" id="menu-bar">
+    </div>
+    <div class="btnNav">
+      <a href="cart.html">
+        <i class="bi bi-cart2"></i>
+        <div id="cartAmount2" class="cartAmount">0</div>
+      </a>
+    </div>
+    <div class="btnNav"><a href="https://wa.me/573163318295" target="_blank"><i class="bi bi-whatsapp"></i></a></div>
   </div>
   
   <div class="shopping-cart" id="shopping-cart">

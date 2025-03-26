@@ -183,7 +183,9 @@ let showProduct = () => {
 
 let calculation = () => {
   let cartIcon = document.getElementById("cartAmount");
+  let cartIcon2 = document.getElementById("cartAmount2");
   cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
+  cartIcon2.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
 };
 
 calculation();
@@ -228,6 +230,7 @@ function onlySuculentas(){
   onDet.innerHTML = "";
   detailSuculentas();
   generateShop();
+  menuBar.checked = false;
 };
 function onlyBromelias(){
   standItemsData = [];
@@ -238,6 +241,7 @@ function onlyBromelias(){
   onDet.innerHTML = "";
   detailBromelias();
   generateShop();
+  menuBar.checked = false;
 };
 function onlyOrquideas(){
   standItemsData = [];
@@ -248,6 +252,7 @@ function onlyOrquideas(){
   onDet.innerHTML = "";
   detailOrquideas();
   generateShop();
+  menuBar.checked = false;
 };
 function onlyAnturios(){
   standItemsData = [];
@@ -258,6 +263,7 @@ function onlyAnturios(){
   onDet.innerHTML = "";
   detailAnturios();
   generateShop();
+  menuBar.checked = false;
 };
 function onlyCartuchos(){
   standItemsData = [];
@@ -268,6 +274,7 @@ function onlyCartuchos(){
   onDet.innerHTML = "";
   detailCartuchos();
   generateShop();
+  menuBar.checked = false;
 };
 function onlyPlaticeros(){
   standItemsData = [];
@@ -278,6 +285,7 @@ function onlyPlaticeros(){
   onDet.innerHTML = "";
   detailPlaticeros();
   generateShop();
+  menuBar.checked = false;
 };
 function onlyComplementos(){
   standItemsData = [];
@@ -288,6 +296,7 @@ function onlyComplementos(){
   onDet.innerHTML = "";
   detailComplementos();
   generateShop();
+  menuBar.checked = false;
 };
 
 function welcome() {

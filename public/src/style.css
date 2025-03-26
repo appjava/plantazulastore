@@ -44,10 +44,10 @@ a {
   border-radius: 4px;
   
 }
-.bi-list{
-  font-size: 30px;
-  color: gray;
-  cursor: cell;
+label .bi-list{
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
 }
 .logo{
   width: 50%;
@@ -84,6 +84,7 @@ a {
 }
 .bi-cart2{
   color: gray;
+  font-size: 24px;
 }
 .cartAmount {
   position: absolute;
@@ -111,6 +112,7 @@ a {
   top: 60px;
   left: 9px;
   width: 303px;
+  height: 100vh;
   color:gray;
   background: rgba(238, 240, 244,0.9);
   transition: all 0.5s;
@@ -121,6 +123,14 @@ a {
   font-size: 18px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+#menu-bar:checked ~ .cates{
+  transform: translateX(0%);
+  transition: all 0.5s;
+}
+.cates p{
+  cursor: pointer;
+}
+
 .bi-x-square-fill {
   color: gray;
   cursor: pointer;
@@ -130,23 +140,48 @@ a {
   font-size: 18px;
   color: #01b41f;
 }
-
-#menu-bar:checked ~ .cates{
-  transform: translateX(0%);
-  transition: all 0.5s;
-}
 #menu-bar{
   display: none;
 }
-.menu p:hover{
-  color: #01b41f;
-  transform: scale(1.2, 1.2) translateX(12%);
-}
+
 .menu p{
   margin-top: 6px;
 }
 .menu #categorias{
   margin-bottom: 12px;
+}
+
+.navbar-mobile{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3px;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  background-color: #01b41f;
+  padding: 12px;
+  width: 100%;
+  border-top: 1px solid white;
+}
+.btnNav{
+  position: relative;
+  background-color: none;
+  width: 15%;
+  text-align: center;
+  align-content: center;
+}
+.bi-house{
+  color: gray;
+  font-size: 18px;
+}
+.bi-list{
+  color: gray;
+  font-size: 18px;
+}
+.bi-whatsapp{
+  color: gray;
+  font-size: 18px;
 }
 
 /**
@@ -680,6 +715,9 @@ ul li:hover {
   .menu{
     display: none;
   }
+  .navbar-mobile{
+    display: none;
+  }
   .logo{
     text-align:start;
   }
@@ -708,6 +746,9 @@ ul li:hover {
     border: solid 2px none;
   }
   .menu{
+    display: none;
+  }
+  .navbar-mobile{
     display: none;
   }
   .welcome{
@@ -750,6 +791,9 @@ ul li:hover {
     font-size: 15px;
   }
   .menu{
+    display: none;
+  }
+  .navbar-mobile{
     display: none;
   }
   .detail{
@@ -803,6 +847,9 @@ ul li:hover {
   .menu{
     display: none;
   }
+  .navbar-mobile{
+    display: none;
+  }
   .image-slider{
     height: 400px;
   }
@@ -831,6 +878,9 @@ ul li:hover {
     font-size: 24px;
   }
   
+  .cart{
+    display: none;
+  }
   .sections {
     display: none;
   }
@@ -853,9 +903,7 @@ ul li:hover {
 	font-size: 12px;
 	color:black;
   }
-  .welcome{
-    display: none;
-  }
+  
   .logo h2{
 	padding-top: 9px;
 	padding-left: 0px;
@@ -873,6 +921,30 @@ ul li:hover {
     height: 5em;
     grid-gap: 6px;
     padding: 0px;
+  }
+  .cartAmount {
+    position: absolute;
+    top: -6px;
+    right: 3px;
+    font-size: 12px;
+    background-color: white;
+    color: #01b41f;
+    padding: 1px 3px;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  .bi-cart2{
+    color: white;
+    font-size: 24px;
+  }
+  .bi-house{
+    color: white;
+    font-size: 24px;
+  }
+ 
+  .bi-whatsapp{
+    color: white;
+    font-size: 24px;
   }
 }
 

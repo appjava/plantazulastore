@@ -28,14 +28,17 @@
       <h6 id="resaltado" class="note estante">"Envío gratis por compras superiores a $90.000 COP"</h6>
   
   <div class="navbar">
+    
     <div class="menu" id="menu">
       
       <ul>
-        <label for="menu-bar"><i class="bi bi-list"></i></label>
+        <!--<label for="menu-bar"><i class="bi bi-list"></i></label>-->
         <input type="checkbox" id="menu-bar">
         
         <nav class="cates">
-			<label for="menu-bar"><i class="bi bi-x-square-fill"></i></label>
+			    <label for="menu-bar">
+            <!--<i class="bi bi-x-square-fill"></i>-->
+          </label>
             <h4>ESTANTERÍA</h4>
             <p onclick="onlyBromelias()">Bromelias</p>
             <p onclick="onlySuculentas()">Suculentas</p>
@@ -45,8 +48,10 @@
             <p onclick="onlyPlaticeros()">Platiceros</p>
             <p onclick="onlyComplementos()">Complementos</p>
         </nav>
+
       </ul>
     </div>
+
     <div class="logo">
       <a href="index.html">
         <img src="images/logos/logoPlantaZula.png" alt="logoPlantaZula">
@@ -54,8 +59,8 @@
     </div>
     
     <div class="logo">
-    <h2>Estante Virtual</h2>
-	</div>
+      <h2>Estante Virtual</h2>
+	  </div>
     
     <div class="cart">
       <a href="cart.html">
@@ -64,6 +69,24 @@
       </a>
       <span id="subTot2" class="subTot"></span>
     </div>
+
+  </div>
+
+  <div class="navbar-mobile">
+    <div class="btnNav"><a href="index.html"><i class="bi bi-house"></i></a></div>
+    <div class="btnNav">
+
+      <label for="menu-bar"><i class="bi bi-list"></i></label>
+       
+
+    </div>
+    <div class="btnNav">
+      <a href="cart.html">
+        <div id="cartAmount2" class="cartAmount">0</div>
+        <i class="bi bi-cart2"></i>
+      </a>
+    </div>
+    <div class="btnNav"><a href="https://wa.me/573163318295" target="_blank"><i class="bi bi-whatsapp"></i></a></div>
   </div>
   
   <div class="sections">
