@@ -109,22 +109,23 @@ label .bi-list{
 .cates{
   display: inline-block;
   position: absolute;
-  top: 60px;
-  left: 6px;
-  width: 320px;
+  margin: 48px auto;
+  min-width: 333px;
+  width: 100vw;
   height: 100vh;
   color:green;
   background: rgba(238, 240, 244,1);
   transition: all 0.5s;
   transform: translateX(-200%);
-  border-radius: 15px;
+  border-radius: 0px;
   padding: 12px;
-  font-weight:lighter;
+  font-weight: normal;
   font-size: 24px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
 }
 #menu-bar:checked ~ .cates{
-  transform: translateX(0%);
+  transform: translateX(-5%);
   transition: all 0.5s;
 }
 .cates p{
@@ -319,7 +320,7 @@ label .bi-list{
 .bi-cart-plus-fill{
   color: #01b41f;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 30px;
   margin: 0;
   background-color: none;
 }
@@ -327,7 +328,11 @@ label .bi-list{
   background-color: none;
   padding-top: 0px;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 18px;
+}
+.v-center{
+  background-color: none;
+  align-items: center;
 }
 .quantity-item-show{
   background-color: none;
@@ -461,8 +466,8 @@ label .bi-list{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  width: 90%;
+  gap: 21px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 10px;
@@ -643,29 +648,28 @@ ul li:hover {
   padding: 3px;
   display: flex;
   justify-content: space-between;
-  background: white;
-  margin: 15px auto 60px auto;
+  background: none;
+  margin: 15px auto 0px auto;
 }
 
 .image-slider{
   width: 100%;
   height: 450px;
 
-  position: relative;
   background-position: center;
   background-size: cover;
   
   background-clip: padding-box;
   margin: 0 auto;
-  border-radius: 9px;
+  border-radius: 0px;
+  
 }
 
 .product-images{
-  position: absolute;
-  bottom: -120px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
+  
+  width: 100%;
+  min-width: 270px;
+  max-width: 450px;
   background: #fff;
   border-radius: 5px;
   display: grid;
@@ -673,6 +677,7 @@ ul li:hover {
   height: 6em;
   grid-gap: 10px;
   padding: 3px;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 
@@ -683,9 +688,7 @@ ul li:hover {
   cursor: pointer;
 }
 
-.product-images img.active{
-  opacity: 0.3;
-}
+
 
 .showcase{
   display: flex;
@@ -890,18 +893,21 @@ ul li:hover {
     right: 6px;
     font-size: 12px;
   }
+  .details {
+    text-align: left;
+  }
   .details h4{
 	padding-top: 3px;
-	font-size: 15px;
-	color:black;
+	font-size: 21px;
+	color:gray;
   }
   .desc-item{
     display: none;
   }
   .price-quantity h3{
 	padding-top: 3px;
-	font-size: 12px;
-	color:black;
+	font-size: 15px;
+	color:gray;
   }
   
   .logo h2{

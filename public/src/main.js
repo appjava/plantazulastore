@@ -79,7 +79,7 @@ let generateShop = () => {
         </div>
         <div class="price-quantity">
           <h3 class="price-item">$ ${price} COP</h3>
-          <div class="buttons">
+          <div class="buttons v-center">
             <i onclick="increment(${id})" class="bi bi-cart-plus-fill"></i>
             <div id=${id} class="quantity-item">
               ${search.item === undefined ? "" : search.item}

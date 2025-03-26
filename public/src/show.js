@@ -58,17 +58,16 @@ let showProduct = () => {
       <h2 class="detail">${search.name}</h2>
       </div>
 
-      <section class="product-details">
-        <div class="image-slider" style="background-image: url(${search.img})">
-            <div class="product-images">
+      <div class="product-details">
+        <div class="image-slider" style="background-image: url(${search.img})"></div>
+      </div>
+      <div class="product-images">
                 <img src=${search.img === undefined ? ["images/logos/logoPlantaZula.png"] : search.img} alt="" class="active">
                 <img src=${search.img1 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img1} alt="" >
                 <img src=${search.img2 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img2} alt="" >
                 <img src=${search.img3 === undefined ? ["images/logos/logoPlantaZula.png"] : search.img3} alt="" >
-            </div>
-        </div>
-      </section>
-      <br><br><br>
+      </div>
+      
       <div>
         <div class="detail">
           <br>
@@ -211,7 +210,9 @@ let update = (id) => {
 
 let calculation = () => {
   let cartIcon = document.getElementById("cartAmount");
+  let cartIcon2 = document.getElementById("cartAmount2");
   cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
+  cartIcon2.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
 };
 
 calculation();

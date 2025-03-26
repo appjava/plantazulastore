@@ -101,9 +101,9 @@ let generateCartItems = () => {
     ShoppingCart.innerHTML = ``;
     label.innerHTML = `
     <h2 class="empty">Vacio</h2>
-    <div class="cart">
+    
     <a href="index.html"><i class="bi bi-stars"></i></a>
-    </div>
+    
     <h5 class="note">* Agrega productos del estante para hacer la compra</h5>
     <a href="index.html">
       <button class="HomeBtn">Volver a Estante</button>
@@ -194,6 +194,7 @@ let removeItem = (id) => {
 let clearCart = () => {
   basket = [];
   generateCartItems();
+  calculation();
   localStorage.setItem("data", JSON.stringify(basket));
   cartIcon.innerHTML = 0;
   contact.innerHTML = ``;
