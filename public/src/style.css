@@ -110,17 +110,17 @@ label .bi-list{
   display: inline-block;
   position: absolute;
   top: 60px;
-  left: 9px;
-  width: 303px;
+  left: 6px;
+  width: 320px;
   height: 100vh;
-  color:gray;
-  background: rgba(238, 240, 244,0.9);
+  color:green;
+  background: rgba(238, 240, 244,1);
   transition: all 0.5s;
   transform: translateX(-200%);
   border-radius: 15px;
   padding: 12px;
   font-weight:lighter;
-  font-size: 18px;
+  font-size: 24px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #menu-bar:checked ~ .cates{
